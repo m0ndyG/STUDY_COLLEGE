@@ -1,0 +1,73 @@
+object fMain: TfMain
+  Left = 876
+  Height = 377
+  Top = 155
+  Width = 864
+  BorderStyle = bsDialog
+  Caption = 'КОМПОНЕНТЫ'
+  ClientHeight = 377
+  ClientWidth = 864
+  Color = 4227327
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '3.2.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 13
+    Top = 0
+    Width = 864
+    Align = alTop
+    Color = 8230221
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    OnClick = Panel1Click
+  end
+  object SG: TStringGrid
+    Left = 0
+    Height = 322
+    Top = 55
+    Width = 864
+    Align = alBottom
+    AlternateColor = 12897488
+    Color = 12237730
+    ColCount = 6
+    FixedCols = 0
+    RowCount = 1
+    TabOrder = 1
+    OnDblClick = bEditClick
+  end
+  object bAdd: TSpeedButton
+    Left = 8
+    Height = 29
+    Top = 19
+    Width = 216
+    Caption = 'Добавление компонента компьютера'
+    OnClick = bAddClick
+  end
+  object bDel: TSpeedButton
+    Left = 440
+    Height = 29
+    Top = 19
+    Width = 167
+    Caption = 'Удалить компонент'
+    OnClick = bDelClick
+  end
+  object bEdit: TSpeedButton
+    Left = 248
+    Height = 29
+    Top = 19
+    Width = 167
+    Caption = 'Редактировать компонент'
+    OnClick = bEditClick
+  end
+  object bSort: TSpeedButton
+    Left = 632
+    Height = 29
+    Top = 19
+    Width = 167
+    Caption = 'Сортировать список'
+    OnClick = bSortClick
+  end
+end

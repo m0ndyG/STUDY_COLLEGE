@@ -1,0 +1,155 @@
+object fEdit: TfEdit
+  Left = 525
+  Height = 386
+  Top = 163
+  Width = 346
+  BorderStyle = bsDialog
+  Caption = 'Редактор компонента'
+  ClientHeight = 386
+  ClientWidth = 346
+  Color = 16045482
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '3.2.0.0'
+  object Lname: TLabel
+    Left = 7
+    Height = 15
+    Top = 7
+    Width = 203
+    Caption = 'Укажите наименование компонента:'
+    ParentColor = False
+  end
+  object eName: TEdit
+    Left = 7
+    Height = 23
+    Top = 27
+    Width = 260
+    TabOrder = 0
+    OnChange = eNameChange
+  end
+  object Lcountry: TLabel
+    Left = 8
+    Height = 15
+    Top = 112
+    Width = 68
+    Caption = 'Год выпуска'
+    ParentColor = False
+  end
+  object eCountry: TEdit
+    Left = 7
+    Height = 23
+    Top = 80
+    Width = 175
+    TabOrder = 1
+    OnChange = eCountryChange
+  end
+  object LJanr: TLabel
+    Left = 7
+    Height = 15
+    Top = 220
+    Width = 79
+    Caption = 'Выберите вид:'
+    ParentColor = False
+  end
+  object CBNote: TComboBox
+    Left = 8
+    Height = 23
+    Top = 240
+    Width = 175
+    ItemHeight = 15
+    Items.Strings = (
+      'Процессор'
+      'Видеокарта'
+      'Материнская плата'
+      'Оперативная память'
+      'ССД накопитель'
+      'Блок питания'
+      'Жесткий диск'
+    )
+    TabOrder = 2
+    Text = '...'
+    OnChange = CBNoteChange
+  end
+  object bSave: TBitBtn
+    Left = 20
+    Height = 30
+    Top = 341
+    Width = 134
+    Caption = 'Сохранить данные'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = bSaveClick
+    TabOrder = 3
+  end
+  object bCancel: TBitBtn
+    Left = 180
+    Height = 30
+    Top = 341
+    Width = 134
+    Cancel = True
+    Caption = 'Не сохранять'
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object YkGod: TLabel
+    Left = 7
+    Height = 15
+    Top = 56
+    Width = 135
+    Caption = 'Укажите производителя:'
+    ParentColor = False
+  end
+  object eGod: TEdit
+    Left = 7
+    Height = 23
+    Top = 134
+    Width = 174
+    MaxLength = 4
+    TabOrder = 5
+    OnChange = eGodChange
+    OnKeyPress = eGodKeyPress
+  end
+  object LSmotr: TLabel
+    Left = 7
+    Height = 15
+    Top = 274
+    Width = 227
+    Caption = 'Устаревшее(более 5 лет с даты выпуска):'
+    ParentColor = False
+  end
+  object CBSmotr: TComboBox
+    Left = 7
+    Height = 23
+    Top = 294
+    Width = 100
+    ItemHeight = 15
+    ItemIndex = 0
+    Items.Strings = (
+      'Да'
+      'Нет'
+    )
+    TabOrder = 6
+    Text = 'Да'
+  end
+  object LRegh: TLabel
+    Left = 7
+    Height = 15
+    Top = 167
+    Width = 180
+    Caption = 'Оценка цена качество (от 1 по 9)'
+    ParentColor = False
+    OnClick = LReghClick
+  end
+  object Regh: TEdit
+    Left = 7
+    Height = 23
+    Top = 187
+    Width = 260
+    MaxLength = 1
+    TabOrder = 7
+    OnChange = ReghChange
+  end
+end
